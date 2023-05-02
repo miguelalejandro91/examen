@@ -8,9 +8,31 @@ porcentaje de números negativos.
 # include <stdio.h>
 int main()
 {
+    int n, num, ceros = 0, pos = 0, neg = 0;
+    float porc_ceros, porc_pos, porc_neg;
 
+    //pedimos al usuario que ingrese la cantidad de numeros a evaluar
 
+    printf("ingrese la cantidad de numeros a evaluar: ");
+    scanf("%d, &n");
 
+    // Pedimos al usuario que ingrese los N números
+
+    printf("Ingrese los %d números:\n", n);
+
+    for (int i = 1; i <= n; i++) {
+    printf("Número %d: ", i);
+    scanf("%d", &num);
+    // Verificamos si el número es cero, positivo o negativo y lo contabilizamos
+    if (num == 0) {
+    ceros++;
+    } else if (num > 0) {
+    pos++;
+    } else {
+    neg++;
+    }
+    }
 
     
-}
+    
+
