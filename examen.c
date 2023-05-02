@@ -33,6 +33,18 @@ int main()
     }
     }
 
-    
+    // Calculamos los porcentajes de ceros, positivos y negativos
+    porc_ceros = ((float)ceros / n) * 100;
+    porc_pos = ((float)pos / n) * 100;
+    porc_neg = ((float)neg / n) * 100;
+
+    // Mostramos los resultados al usuario
+    printf("\nResultados:\n");
+    printf("Porcentaje de números cero: %.2f%%\n", porc_ceros);
+    printf("Porcentaje de números positivos: %.2f%%\n", porc_pos);
+    printf("Porcentaje de números negativos: %.2f%%\n", porc_neg);
+
+    return 0;
+}
     
 
