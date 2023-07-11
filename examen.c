@@ -20,7 +20,7 @@ void capitalize(char *word) {
 }
 int main() {
     FILE *inputFile = fopen("tricolor.txt", "r");
-    FILE *outputFile = fopen("output.csv", "w");
+    FILE *outputFile = fopen("resultado.csv", "w");
     if (!inputFile || !outputFile) {
         printf("Error opening files\n");
         
