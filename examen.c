@@ -18,4 +18,28 @@ void capitalize(char *word) {
         word[0] = toupper(word[0]);
     }
 }
+int main() {
+    FILE *inputFile = fopen("tricolor.txt", "r");
+    FILE *outputFile = fopen("output.csv", "w");
+    if (!inputFile || !outputFile) {
+        printf("Error opening files\n");
+        
+    }
+
+    char word[MAX_WORD_SIZE];
+    int totalCorrections = 0;
+    while (fscanf(inputFile, "%s", word) != EOF) {
+        if (strcmp(word, "ecuador") == 0) {
+            capitalize(word);
+            totalCorrections++;
+        }
+        fprintf(outputFile, "%s,", word);
+    }
+
+    fclose(inputFile);
+    fclose(outputFile);
+
+    printf("Total de palabras corregidas: %d\n", totalCorrections);
+    return 0;
+}
 
